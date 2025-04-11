@@ -6,7 +6,7 @@ const store = configureStore({
         [cryptoApi.reducerPath]: cryptoApi.reducer,
 
     },
-    getDefaultMiddleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(cryptoApi.middleware)
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(cryptoApi.middleware),
 })
 
 

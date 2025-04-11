@@ -1,4 +1,4 @@
-import { createApi,fetchBaseQuery } from "@reduxjs/toolkit/query";    
+import { createApi,fetchBaseQuery } from "@reduxjs/toolkit/query/react";    
 
 const cryptoApiHeaders = {
     'x-rapidapi-key': '41300365a3mshd3cb0c346763d5cp11e8cdjsneebe066923b7',
@@ -14,7 +14,7 @@ export const cryptoApi = createApi({
     baseQuery: fetchBaseQuery({baseUrl}),    
     endpoints: (builder) => ({
         getCryptos:builder.query({
-            query:() => createRequest('/coiins')
+            query:() => createRequest('/coins')
         })
     })
 
